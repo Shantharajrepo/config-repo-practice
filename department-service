@@ -28,3 +28,5 @@ eureka.instance.hostname=localhost
 #eureka.instance.ip-address=127.0.0.1
 eureka.instance.instance-id=${eureka.instance.hostname}:${spring.application.name}:${server.port}
 #eureka.instance.non-secure-port=${server.port}
+
+department.data=original value
