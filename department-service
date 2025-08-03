@@ -1,0 +1,30 @@
+server.port=8080
+
+#h2- database config
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+# show sql in console
+spring.jpa.show-sql=true
+
+# automatically create tables based on entities
+spring.jpa.hibernate.ddl-auto=update
+
+# Enable H2 console in browser
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# to register with eureka server
+eureka.instance.client.serverUrl.defaultZone=http://localhost:8761/eureka/
+
+
+eureka.instance.hostname=localhost
+#eureka.instance.prefer-ip-address=true
+
+#eureka.instance.ip-address=127.0.0.1
+eureka.instance.instance-id=${eureka.instance.hostname}:${spring.application.name}:${server.port}
+#eureka.instance.non-secure-port=${server.port}
